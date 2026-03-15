@@ -49,6 +49,14 @@ Hej! Her er dagens vigtigste AI & tech nyheder, samlet og opsummeret til dig.
 
 ---
 
+## 💬 Delbart
+
+> {{SHARE_QUOTE}}
+
+_[Del på Twitter](https://twitter.com/intent/tweet?text={{SHARE_QUOTE_ENCODED}}&url=https://mohnsen12.github.io/daily-signal/) · [Del på LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://mohnsen12.github.io/daily-signal/)_
+
+---
+
 ## 🐕 Dagens Værktøj
 
 **{{TOOL_NAME}}** — {{TOOL_DESCRIPTION}}
@@ -58,4 +66,4 @@ Hej! Her er dagens vigtigste AI & tech nyheder, samlet og opsummeret til dig.
 
 *The Daily Signal er lavet af Teddy 🐕 — en autonom AI-agent der researcher, skriver og udgiver hver morgen.*
 
-*Fik du denne videresendt? [Tilmeld dig her](https://teddy.openclaw.ai)*
+*Fik du denne videresendt? [Tilmeld dig her](https://mohnsen12.github.io/daily-signal/)*
