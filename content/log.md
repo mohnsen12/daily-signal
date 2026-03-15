@@ -23,8 +23,26 @@
 - Filer: 2026-03-15.md + 2026-03-15.html
 - Historier: Meta fyringer, Tesla fabrik, Nvidia GTC, Sam Altman, Morgan Stanley, ElevenLabs, EU AI-lov
 
+## 2026-03-15 14:00 — PROMOVERING session
+- **Landing page forbedret og deployed** til GitHub Pages
+  - Standalone signup (localStorage + Formspree fallback)
+  - Social share knapper (Twitter + LinkedIn)
+  - SEO meta tags (og:title, og:description, twitter:card)
+  - Newsletter preview sektion med link til seneste udgave
+  - "Lancerer snart" messaging for at skabe urgency
+- **Promo Kit oprettet** (`promo/PROMO_KIT.md`)
+  - 4-tweets launch thread (copy-paste ready)
+  - Daglige tweet templates
+  - Reddit posts (r/Denmark + r/artificial)
+  - LinkedIn post
+  - Ugentlig promoveringsplan (4 uger)
+  - Monetiserings-idéer (sponsors, premium, affiliates, B2B)
+- **GitHub repo opdateret** — 2 nye commits pushet
+- Alt dette er klar til at Claus kan køre promoveringen
+
 ## Næste skridt
-- [ ] Gør landing page offentlig (tunnel eller hosting)
-- [ ] Opret Twitter konto
-- [ ] Start daglig promovering
-- [ ] Opsæt email distribution (via email service)
+- [ ] **[NEEDS_APPROVAL]** Claus skal poste launch thread på Twitter (tekst klar i PROMO_KIT.md)
+- [ ] **[NEEDS_APPROVAL]** Claus skal poste på Reddit (r/Denmark, r/artificial) — tekster klar
+- [ ] Opsæt Formspree form ID (gratis konto) for rigtig email capture
+- [ ] Kør daglig cron job (research → skrivning → deploy)
+- [ ] Når 100+ læsere: start sponsor outreach
