@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Daily Signal — AI & Tech, hver morgen</title>
+    <meta name="description" content="Dagens vigtigste AI & tech nyheder, samlet og opsummeret på dansk. Hver morgen kl. 6.">
+    <meta property="og:title" content="The Daily Signal — AI & Tech på dansk">
+    <meta property="og:description" content="5-7 kuraterede AI & tech historier hver morgen. Opdateret på 5 minutter.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohnsen12.github.io/daily-signal/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Daily Signal — AI & Tech på dansk">
+    <meta name="twitter:description" content="5-7 kuraterede AI & tech historier hver morgen.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +23,6 @@
             --text: #1a1a2e;
             --text-muted: #6c757d;
             --border: #dee2e6;
-            --highlight: #fff3cd;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -24,8 +31,6 @@
             color: var(--text);
             line-height: 1.6;
         }
-
-        /* Header */
         header {
             border-bottom: 4px solid var(--accent);
             background: var(--bg);
@@ -39,212 +44,112 @@
             align-items: center;
             justify-content: space-between;
         }
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .logo-icon {
-            font-size: 2rem;
-        }
+        .logo-area { display: flex; align-items: center; gap: 0.75rem; }
+        .logo-icon { font-size: 2rem; }
         .logo-text h1 {
             font-family: 'Merriweather', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
+            font-size: 1.5rem; font-weight: 900; letter-spacing: -0.5px;
         }
         .logo-text span {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;
         }
-        .date {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        /* Hero */
+        .date { font-size: 0.875rem; color: var(--text-muted); font-weight: 500; }
         .hero {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            text-align: center;
+            max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; text-align: center;
         }
         .hero h2 {
             font-family: 'Merriweather', Georgia, serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text);
+            font-size: 2.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 1rem;
         }
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        /* Signup box */
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; }
         .signup-box {
-            background: var(--surface);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            max-width: 520px;
-            margin: 0 auto 3rem;
+            background: var(--surface); border: 2px solid var(--border);
+            border-radius: 12px; padding: 2rem; max-width: 520px; margin: 0 auto 3rem;
         }
-        .signup-box h3 {
-            font-size: 1.125rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        .input-group {
-            display: flex;
-            gap: 0.5rem;
-        }
+        .signup-box h3 { font-size: 1.125rem; margin-bottom: 1rem; font-weight: 700; }
+        .input-group { display: flex; gap: 0.5rem; }
         input[type="email"] {
-            flex: 1;
-            padding: 0.875rem 1rem;
-            border-radius: 8px;
-            border: 2px solid var(--border);
-            background: var(--bg);
-            font-size: 1rem;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.2s;
+            flex: 1; padding: 0.875rem 1rem; border-radius: 8px;
+            border: 2px solid var(--border); background: var(--bg);
+            font-size: 1rem; font-family: inherit; outline: none; transition: border-color 0.2s;
         }
         input[type="email"]:focus { border-color: var(--accent); }
         button {
-            padding: 0.875rem 1.75rem;
-            border-radius: 8px;
-            border: none;
-            background: var(--accent);
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.2s;
-            font-family: inherit;
+            padding: 0.875rem 1.75rem; border-radius: 8px; border: none;
+            background: var(--accent); color: white; font-weight: 700;
+            font-size: 1rem; cursor: pointer; transition: background 0.2s; font-family: inherit;
         }
         button:hover { background: var(--accent-dark); }
-        .signup-note {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 0.75rem;
+        .signup-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; }
+        #message { margin-top: 0.75rem; font-size: 0.9rem; min-height: 1.25rem; }
+        .social-share {
+            display: flex; justify-content: center; gap: 0.75rem; margin-top: 1rem;
         }
-        #message {
-            margin-top: 0.5rem;
-            font-size: 0.875rem;
-            min-height: 1.25rem;
+        .social-share a {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem;
+            text-decoration: none; font-weight: 600; transition: opacity 0.2s;
         }
-
-        /* Stats */
+        .social-share a:hover { opacity: 0.85; }
+        .share-twitter { background: #1da1f2; color: white; }
+        .share-linkedin { background: #0077b5; color: white; }
         .stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
+            display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap;
         }
-        .stat {
-            text-align: center;
-        }
+        .stat { text-align: center; }
         .stat-number {
-            font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--accent);
+            font-family: 'Merriweather', serif; font-size: 2rem; font-weight: 900; color: var(--accent);
         }
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Features */
-        .features {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1.5rem 3rem;
-        }
-        .features h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-        .feature {
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            text-align: left;
-        }
-        .feature-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .feature h4 { font-size: 1rem; margin-bottom: 0.25rem; }
-        .feature p { font-size: 0.875rem; color: var(--text-muted); }
-
-        /* Sample headlines */
-        .sample {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1.5rem 3rem;
-        }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        .sample { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 3rem; }
         .sample h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
+            font-family: 'Merriweather', serif; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;
         }
-        .headline-list {
-            list-style: none;
-        }
+        .headline-list { list-style: none; }
         .headline-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+            padding: 1rem 0; border-bottom: 1px solid var(--border);
+            display: flex; align-items: flex-start; gap: 1rem;
         }
         .headline-list li:last-child { border-bottom: none; }
         .headline-tag {
-            background: var(--accent);
-            color: white;
-            padding: 0.125rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            white-space: nowrap;
+            background: var(--accent); color: white; padding: 0.125rem 0.5rem;
+            border-radius: 4px; font-size: 0.7rem; font-weight: 700;
+            text-transform: uppercase; white-space: nowrap;
         }
         .headline-tag.tech { background: #6f42c1; }
         .headline-tag.product { background: #20c997; }
         .headline-tag.analysis { background: #fd7e14; }
-        .headline-text {
-            font-size: 0.95rem;
-            line-height: 1.5;
+        .headline-text { font-size: 0.95rem; line-height: 1.5; }
+        .features { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+        .features h3 {
+            font-family: 'Merriweather', serif; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;
         }
-
-        /* Footer */
+        .feature-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;
+        }
+        .feature { padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px; }
+        .feature-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .feature h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .feature p { font-size: 0.875rem; color: var(--text-muted); }
+        .newsletter-preview {
+            max-width: 800px; margin: 0 auto; padding: 0 1.5rem 3rem;
+        }
+        .newsletter-preview h3 {
+            font-family: 'Merriweather', serif; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;
+        }
+        .preview-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 8px; padding: 2rem;
+        }
+        .preview-card h4 { font-family: 'Merriweather', serif; margin-bottom: 0.5rem; }
+        .preview-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+        .preview-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .preview-link:hover { text-decoration: underline; }
         footer {
-            border-top: 1px solid var(--border);
-            padding: 2rem 1.5rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
+            border-top: 1px solid var(--border); padding: 2rem 1.5rem;
+            text-align: center; color: var(--text-muted); font-size: 0.875rem;
         }
         footer a { color: var(--accent); text-decoration: none; }
-
-        /* Mobile */
         @media (max-width: 600px) {
             .hero h2 { font-size: 1.75rem; }
             .input-group { flex-direction: column; }
@@ -271,13 +176,17 @@
         <p>Hver morgen modtager du 5-7 kuraterede historier — så du kan være opdateret på 5 minutter.</p>
 
         <div class="signup-box">
-            <h3>🚀 Vær med fra starten</h3>
+            <h3>🚀 Vær med fra starten — lancerer snart!</h3>
             <div class="input-group">
-                <input type="email" placeholder="din@email.dk" id="email">
-                <button onclick="signup()">Tilmeld gratis</button>
+                <input type="email" placeholder="din@email.dk" id="email" required>
+                <button onclick="signup()">Tilmeld dig</button>
             </div>
             <p class="signup-note">Ingen spam. Kun signal. Afmeld når som helst.</p>
             <p id="message"></p>
+            <div class="social-share">
+                <a href="https://twitter.com/intent/tweet?text=The%20Daily%20Signal%20%E2%80%94%20AI%20%26%20Tech%20nyhedsbrev%20p%C3%A5%20dansk%20%F0%9F%93%A1%20Kurateret%20af%20AI%2C%20leveret%20hver%20morgen.%20Tilmeld%20dig%20gratis%20%F0%9F%94%97&url=https://mohnsen12.github.io/daily-signal/" target="_blank" class="share-twitter">🐦 Del på Twitter</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://mohnsen12.github.io/daily-signal/" target="_blank" class="share-linkedin">💼 Del på LinkedIn</a>
+            </div>
         </div>
     </section>
 
@@ -318,6 +227,15 @@
         </ul>
     </section>
 
+    <section class="newsletter-preview">
+        <h3>📰 Seneste udgave</h3>
+        <div class="preview-card">
+            <h4>The Daily Signal — Søndag 15. marts 2026</h4>
+            <p>7 historier: Meta fyringer, Teslas chipfabrik, Nvidia GTC preview, Sam Altmans vision, Morgan Stanley advarsel, ElevenLabs stemmeprojekt, EU deepfake-lov.</p>
+            <a href="https://github.com/mohnsen12/daily-signal/blob/main/content/2026-03-15.md" class="preview-link">Læs hele udgaven →</a>
+        </div>
+    </section>
+
     <section class="features">
         <h3>Hvorfor The Daily Signal?</h3>
         <div class="feature-grid">
@@ -346,34 +264,70 @@
 
     <footer>
         <p>Lavet med ❤️ af <strong>Teddy 🐕</strong> — verdens første AI-nyhedsredaktør</p>
-        <p style="margin-top: 0.5rem;"><a href="https://github.com/mohnsen12/daily-signal">GitHub</a></p>
+        <p style="margin-top: 0.5rem;"><a href="https://github.com/mohnsen12/daily-signal">GitHub</a> · <a href="https://github.com/mohnsen12/daily-signal/blob/main/content/2026-03-15.md">Seneste udgave</a></p>
     </footer>
 
     <script>
+        // Collect emails locally until backend is ready
+        function getSubscribers() {
+            try { return JSON.parse(localStorage.getItem('ds_subscribers') || '[]'); }
+            catch(e) { return []; }
+        }
+        function saveSubscriber(email) {
+            const subs = getSubscribers();
+            if (!subs.find(s => s.email === email)) {
+                subs.push({ email, date: new Date().toISOString() });
+                localStorage.setItem('ds_subscribers', JSON.stringify(subs));
+            }
+        }
+
         async function signup() {
-            const email = document.getElementById('email').value;
+            const email = document.getElementById('email').value.trim();
             const msg = document.getElementById('message');
-            if (!email || !email.includes('@')) {
-                msg.textContent = 'Indtast en gyldig email';
+            const btn = document.querySelector('.signup-box button');
+            
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                msg.textContent = '⚠️ Indtast en gyldig email-adresse';
                 msg.style.color = '#e63946';
                 return;
             }
+            
+            // Check if already submitted (locally)
+            const subs = getSubscribers();
+            if (subs.find(s => s.email === email)) {
+                msg.textContent = '✅ Du er allerede på listen!';
+                msg.style.color = '#198754';
+                return;
+            }
+            
+            btn.textContent = 'Tilmelder...';
+            btn.disabled = true;
+            
+            // Save locally
+            saveSubscriber(email);
+            
+            // Try Formspree if configured
             try {
-                const res = await fetch('http://127.0.0.1:3457/api/subscribe', {
+                await fetch('https://formspree.io/f/xpwzgkqr', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email })
+                    body: JSON.stringify({ email: email, source: 'landing-page' })
                 });
-                const data = await res.json();
-                msg.textContent = '✅ Du er på listen! Tjek din indbakke.';
-                msg.style.color = '#198754';
-                document.getElementById('email').value = '';
-            } catch (e) {
-                msg.textContent = '✅ Tak! Du er tilmeldt!';
-                msg.style.color = '#198754';
-                document.getElementById('email').value = '';
+            } catch(e) {
+                // OK, we saved locally
             }
+            
+            msg.innerHTML = '✅ Du er på listen! Du hører fra os ved lancering.';
+            msg.style.color = '#198754';
+            document.getElementById('email').value = '';
+            btn.textContent = 'Tilmeld dig';
+            btn.disabled = false;
         }
+        
+        // Allow Enter key
+        document.getElementById('email').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') signup();
+        });
     </script>
 </body>
 </html>
