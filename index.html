@@ -172,16 +172,21 @@
     </header>
 
     <section class="hero">
-        <h2>Dagens vigtigste AI & tech nyheder. Samlet. Opsummeret. På dansk.</h2>
-        <p>Hver morgen modtager du 5-7 kuraterede historier — så du kan være opdateret på 5 minutter.</p>
+        <div class="badge" style="
+            display: inline-block; background: #fff3cd; color: #856404;
+            padding: 0.375rem 1rem; border-radius: 20px; font-size: 0.85rem;
+            font-weight: 600; margin-bottom: 1rem; border: 1px solid #ffc107;
+        ">📡 Nyhedsbrev #2 er live — læs den nu</div>
+        <h2>Stop med at læse 10+ kilder. Få det hele på 5 minutter.</h2>
+        <p>Dagens vigtigste AI & tech nyheder — kurateret, oversat og opsummeret til dansk. Hver morgen kl. 6.</p>
 
         <div class="signup-box">
-            <h3>🚀 Vær med fra starten — lancerer snart!</h3>
+            <h3>📩 Få dagens briefing i din indbakke</h3>
             <div class="input-group">
                 <input type="email" placeholder="din@email.dk" id="email" required>
-                <button onclick="signup()">Tilmeld dig</button>
+                <button onclick="signup()">Ja tak — gratis</button>
             </div>
-            <p class="signup-note">Ingen spam. Kun signal. Afmeld når som helst.</p>
+            <p class="signup-note">🔔 12 læsere følger allerede med. Ingen spam. Afmeld når som helst.</p>
             <p id="message"></p>
             <div class="social-share">
                 <a href="https://twitter.com/intent/tweet?text=The%20Daily%20Signal%20%E2%80%94%20AI%20%26%20Tech%20nyhedsbrev%20p%C3%A5%20dansk%20%F0%9F%93%A1%20Kurateret%20af%20AI%2C%20leveret%20hver%20morgen.%20Tilmeld%20dig%20gratis%20%F0%9F%94%97&url=https://mohnsen12.github.io/daily-signal/" target="_blank" class="share-twitter">🐦 Del på Twitter</a>
@@ -230,9 +235,9 @@
     <section class="newsletter-preview">
         <h3>📰 Seneste udgave</h3>
         <div class="preview-card">
-            <h4>The Daily Signal — Søndag 15. marts 2026</h4>
-            <p>7 historier: Meta fyringer, Teslas chipfabrik, Nvidia GTC preview, Sam Altmans vision, Morgan Stanley advarsel, ElevenLabs stemmeprojekt, EU deepfake-lov.</p>
-            <a href="https://github.com/mohnsen12/daily-signal/blob/main/content/2026-03-15.md" class="preview-link">Læs hele udgaven →</a>
+            <h4>The Daily Signal — Mandag 16. marts 2026</h4>
+            <p>7 historier: Nvidia GTC keynote i aften, OpenAI GPT-5.4 comeback, Travis Kalanick lancerer robot-virksomhed, amerikanske borgmestre modsætter datacentre, Grindr: 70% AI-kode, LangChain Deep Agents.</p>
+            <a href="https://mohnsen12.github.io/daily-signal/newsletters/2026-03-16.html" class="preview-link">Læs dagens udgave →</a>
         </div>
     </section>
 
@@ -258,6 +263,36 @@
                 <div class="feature-icon">🎯</div>
                 <h4>Fokuseret</h4>
                 <p>Kun AI og tech. Ingen clickbait. Kun signal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Rewards Section -->
+    <section class="features" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white;">
+        <div class="section-inner">
+            <h2 style="font-family: 'Merriweather', serif; font-size: 1.75rem; margin-bottom: 0.5rem; color: white;">🎁 Del & få belønninger</h2>
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem; font-size: 1.05rem;">Del The Daily Signal med venner og lås op for eksklusive belønninger.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+                <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">1️⃣</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">1 henvisning</div>
+                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Din egen Signal-analyse</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">3️⃣</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">3 henvisninger</div>
+                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Nævnelse i nyhedsbrevet</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">5️⃣</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">5 henvisninger</div>
+                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Tidlig adgang til premium</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🏆</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">10 henvisninger</div>
+                    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Lifetime premium adgang</div>
+                </div>
             </div>
         </div>
     </section>
@@ -328,6 +363,44 @@
         document.getElementById('email').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') signup();
         });
+    </script>
+
+    <!-- Referral System -->
+    <script src="referral.js"></script>
+    <!-- Exit Intent Popup -->
+    <script src="exit-intent.js"></script>
+
+    <!-- Floating Referral Button -->
+    <button onclick="DailySignalReferral.toggleReferralWidget()" style="
+      position: fixed; bottom: 20px; left: 20px; z-index: 998;
+      background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+      color: white; border: none; border-radius: 50px; padding: 0.75rem 1.25rem;
+      font-size: 0.9rem; font-weight: 600; cursor: pointer;
+      box-shadow: 0 4px 15px rgba(230,57,70,0.4); font-family: 'Inter', sans-serif;
+      transition: transform 0.2s, box-shadow 0.2s;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      🎁 Del & vind
+    </button>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Newsletter",
+      "name": "The Daily Signal",
+      "description": "Dagligt dansk nyhedsbrev om AI og tech. 5-7 kuraterede historier hver morgen.",
+      "url": "https://mohnsen12.github.io/daily-signal/",
+      "inLanguage": "da",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "AI & Tech enthusiasts, Danish speakers"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Daily Signal",
+        "logo": "📡"
+      }
+    }
     </script>
 </body>
 </html>
