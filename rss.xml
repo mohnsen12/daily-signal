@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>The Daily Signal — AI &amp; Tech på dansk</title>
+    <link>https://teddy.openclaw.ai</link>
+    <description>Dagens vigtigste AI &amp; tech nyheder. Samlet. Opsummeret. På dansk. Hver morgen modtager du 5-7 kuraterede historier — så du kan være opdateret på 5 minutter.</description>
+    <language>da</language>
+    <lastBuildDate>Mon, 16 Mar 2026 06:00:00 +0100</lastBuildDate>
+    <atom:link href="https://teddy.openclaw.ai/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://teddy.openclaw.ai/logo.png</url>
+      <title>The Daily Signal</title>
+      <link>https://teddy.openclaw.ai</link>
+    </image>
+    <item>
+      <title>Meta fyrer 16.000 · Nvidia GTC · Altman's AI-vision</title>
+      <link>https://teddy.openclaw.ai/newsletters/2026-03-15.html</link>
+      <guid isPermaLink="true">https://teddy.openclaw.ai/newsletters/2026-03-15.html</guid>
+      <pubDate>Sun, 15 Mar 2026 06:00:00 +0100</pubDate>
+      <description>Meta forbereder historiske fyringer pga. AI-omkostninger. Nvidia GTC 2026 starter med 39.000 deltagere. Sam Altman sammenligner AI med el-selskaber. Plus: Tesla Terafab, ElevenLabs stemmegendannelse, og EU's nye deepfake-regler.</description>
+      <content:encoded><![CDATA[
+        <h2>🔥 Breaking</h2>
+        <h3>Meta planlægger historiske fyringer — op til 20% af arbejdsstyrken ryger</h3>
+        <p>Meta er ifølge Reuters i gang med at forberede massive fyringsrunder, der kan ramme op til 16.000 medarbejdere. Årsagen? De enorme omkostninger ved AI-infrastruktur.</p>
+
+        <h2>📦 Produkter &amp; Lanceringer</h2>
+        <h3>Tesla Terafab: Musk lover gigantisk AI-chipfabrik om 7 dage</h3>
+        <p>Teslas "Terafab"-projekt starter om syv dage. Målet: kontrol over egen chip-forsyningskæde.</p>
+        <h3>Nvidia GTC 2026 starter mandag — alt øjne på Jensen Huang</h3>
+        <p>Over 39.000 deltagere fra 190+ lande. Nvidia udvider fra GPU'er til CPU'er og rack-systemer til agentic AI.</p>
+
+        <h2>🔍 Analyse &amp; Indsigt</h2>
+        <h3>Sam Altman: "AI bliver solgt som strøm — per måleren"</h3>
+        <p>Altman's vision: AI som offentlig forsyning. Køb "intelligens-enheder" på abonnement.</p>
+        <h3>Morgan Stanley: Stort AI-gennembrud kan ramme i 2026</h3>
+        <p>Investeringsbanken vurderer et stort gennembrud i første halvår — men advarer om overbelastede elnet.</p>
+
+        <h2>🛠️ Værktøjer &amp; Regulering</h2>
+        <h3>ElevenLabs "1 Million Voices" — AI genskaber mistede stemmer gratis</h3>
+        <p>Gratis stemmegendannelse til én million mennesker.</p>
+        <h3>EU vil forbyde AI-genereret seksuelt indhold uden samtykke</h3>
+        <p>EU-ambassadørerne enige om forbud. Regler træder i kraft august 2026.</p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Nvidia GTC, OpenAI comeback &amp; AI-backlash</title>
+      <link>https://teddy.openclaw.ai/newsletters/2026-03-16.html</link>
+      <guid isPermaLink="true">https://teddy.openclaw.ai/newsletters/2026-03-16.html</guid>
+      <pubDate>Mon, 16 Mar 2026 06:00:00 +0100</pubDate>
+      <description>GTC keynoten i aften, OpenAI's GPT-5.4, Travis Kalanicks robotstartup, amerikanske borgmestre siger fra mod datacentre, og 70% AI-genereret kode hos Grindr.</description>
+    </item>
+  </channel>
+</rss>

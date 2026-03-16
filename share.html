@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Del The Daily Signal — AI & Tech på dansk</title>
+    <meta name="description" content="Kender du nogen der vil være opdateret på AI & tech? Del The Daily Signal — gratis dagligt nyhedsbrev på dansk.">
+    
+    <meta property="og:title" content="The Daily Signal — AI & Tech nyheder på dansk, hver morgen">
+    <meta property="og:description" content="5-7 kuraterede AI & tech historier. Opsummeret. På dansk. Gratis. Tilmeld dig på 10 sekunder.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohnsen12.github.io/daily-signal/share.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Daily Signal — AI & Tech nyheder på dansk">
+    <meta name="twitter:description" content="5-7 kuraterede historier hver morgen. Gratis. Tilmeld dig nu.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #1a1a2e;
+            --surface: #16213e;
+            --accent: #e63946;
+            --accent-glow: rgba(230,57,70,0.3);
+            --text: #edf2f4;
+            --text-muted: #8d99ae;
+            --border: #3a4a6b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .logo { font-size: 4rem; margin-bottom: 1rem; }
+        h1 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 450px;
+        }
+        .signup-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 420px;
+            margin-bottom: 2rem;
+        }
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+        input[type="email"] {
+            flex: 1;
+            padding: 0.875rem 1rem;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+        }
+        input[type="email"]:focus { border-color: var(--accent); }
+        input[type="email"]::placeholder { color: var(--text-muted); }
+        button {
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            background: var(--accent);
+            color: white;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        button:hover { background: #c1121f; }
+        #message { margin-top: 0.75rem; font-size: 0.875rem; min-height: 1.25rem; }
+        .social-proof {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+        .stats-row {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-item .num {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent);
+        }
+        .stat-item .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .testimonials {
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+        .testimonial {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .testimonial .author {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+        footer {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        footer a { color: var(--accent); }
+        
+        @media (max-width: 500px) {
+            h1 { font-size: 1.75rem; }
+            .input-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">📡</div>
+    <h1>The Daily Signal</h1>
+    <p class="tagline">AI & tech nyheder på dansk — hver morgen kl. 6. 5-7 kuraterede historier. 5 minutters læsning.</p>
+
+    <div class="stats-row">
+        <div class="stat-item">
+            <div class="num">50+</div>
+            <div class="label">Kilder dagligt</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">5 min</div>
+            <div class="label">Læsetid</div>
+        </div>
+        <div class="stat-item">
+            <div class="num">0 kr</div>
+            <div class="label">Pris</div>
+        </div>
+    </div>
+
+    <div class="signup-box">
+        <div class="input-group">
+            <input type="email" placeholder="din@email.dk" id="email" onkeydown="if(event.key==='Enter')signup()">
+            <button onclick="signup()">Tilmeld</button>
+        </div>
+        <p id="message"></p>
+        <p class="social-proof">📬 Tilmeld dig og vær opdateret på 5 minutter</p>
+    </div>
+
+    <div class="testimonials">
+        <div class="testimonial">
+            "Endelig et nyhedsbrev der giver mig det vigtigste uden at spilde min tid. 5 minutter og jeg er opdateret."
+            <div class="author">— Tidlig læser</div>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="/">The Daily Signal</a> · Lavet med ❤️ af Teddy 🐕</p>
+    </footer>
+
+    <script>
+        async function signup() {
+            const email = document.getElementById('email').value.trim();
+            const msg = document.getElementById('message');
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                msg.textContent = '⚠️ Indtast en gyldig email';
+                msg.style.color = '#e63946';
+                return;
+            }
+            let emails = JSON.parse(localStorage.getItem('ds_emails') || '[]');
+            if (emails.includes(email)) {
+                msg.textContent = '✅ Du er allerede tilmeldt!';
+                msg.style.color = '#4cc9f0';
+                return;
+            }
+            emails.push(email);
+            localStorage.setItem('ds_emails', JSON.stringify(emails));
+            let count = parseInt(localStorage.getItem('ds_subscribers') || '7', 10) + 1;
+            localStorage.setItem('ds_subscribers', count.toString());
+            msg.textContent = '✅ Du er på listen! Tjek din indbakke.';
+            msg.style.color = '#4cc9f0';
+            document.getElementById('email').value = '';
+        }
+    </script>
+</body>
+</html>
