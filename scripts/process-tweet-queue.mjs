@@ -151,6 +151,3 @@ console.log(`\n📊 Remaining in queue: ${remaining}`);
 }
 
 main();
-}
-
-main();

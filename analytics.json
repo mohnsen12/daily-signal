@@ -1,0 +1,41 @@
+{
+  "snapshots": [
+    {
+      "date": "2026-03-16T21:02:45.572Z",
+      "metrics": {
+        "totalIssues": 2,
+        "avgStories": 6.5,
+        "avgWords": 748,
+        "avgLinks": 6.5,
+        "avgReadTimeMin": 4,
+        "qualityScore": 50,
+        "consistencyStreak": 2,
+        "latestIssue": {
+          "date": "2026-03-16",
+          "storyCount": 7,
+          "wordCount": 788,
+          "linkCount": 6,
+          "sectionCount": 7,
+          "sectionNames": [
+            "🔥 Breaking",
+            "📦 Produkter & Lanceringer",
+            "🔍 Analyse & Indsigt",
+            "🛠️ Værktøjer du bør kende",
+            "🎙️ Dagens Signal",
+            "💬 Delbart",
+            "🐕 Dagens Værktøj"
+          ],
+          "features": {
+            "tldr": false,
+            "tool": true,
+            "numbers": false,
+            "opinion": false
+          },
+          "readingTimeMin": 4
+        }
+      }
+    }
+  ],
+  "firstRun": "2026-03-16T21:02:45.572Z",
+  "lastUpdated": "2026-03-16T21:02:45.572Z"
+}

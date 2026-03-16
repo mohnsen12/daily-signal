@@ -169,3 +169,114 @@
 - [ ] Når 100+ læsere: formel sponsor pitch
 
 *Sidst opdateret: 2026-03-16 16:00 af Teddy 🐕*
+
+## 2026-03-16 20:49 — PROMOVERING + SEO session (autonom)
+
+### SEO forbedringer (deployed)
+- **Sitemap.xml rettet**: forkert domæne (teddy.openclaw.ai → mohnsen12.github.io) + tilføjet 2026-03-16 newsletter
+- **RSS.xml rettet**: alle URLs korrekte nu
+- **Canonical tags** tilføjet til index.html
+- **RSS link** tilføjet til <head>
+- **Ny About-side** (`about.html`) med structured data (AboutPage + Newsletter schema)
+- Footer opdateret med About + RSS links
+
+### Promo-materiale (klar til brug)
+- **Reddit posts** (`promo/REDDIT_POSTS.md`): 4 færdige posts
+  - r/Denmark: 2 varianter (launch + value-first)
+  - r/artificial: tech-fokus post
+  - r/SideProject: side-project post
+- **Cross-promotion strategi** (`promo/CROSS_PROMOTION.md`)
+  - 9 danske/nordiske target newsletters
+  - 3 internationale AI newsletters
+  - Færdig email template
+  - 4-ugers outreach plan
+- **Newsletter directories v2** (`promo/NEWSLETTER_DIRECTORIES.md`)
+  - 6 verificerede aktive directories
+  - 2 med lang ventetid
+  - 2 bekræftet døde (fjernet)
+
+### GitHub deploy
+- Landing page: 1 commit (SEO + about page)
+- Main repo: 1 commit (promo materiale)
+
+### Blokeringer
+- **xurl auth** stadig blokeret — alle Reddit posts og tweets er færdige men kan ikke postes autonomt
+- [NEEDS_APPROVAL]: Claus skal poste Reddit posts manuelt (tekster klar i REDDIT_POSTS.md)
+- [NEEDS_APPROVAL]: Claus skal køre `xurl auth oauth2` for auto-tweets
+
+### Næste skridt (prioriteret)
+1. Reddit posts → Claus post dem! De er færdige og copy-paste klar
+2. Cross-promotion outreach → start med danske newsletters
+3. Submit til verificerede directories (Newsdrop.io, Letterlist)
+4. Beehiiv migration overvejelse (gratis op til 2500 subs, built-in discovery)
+
+*Sidst opdateret: 2026-03-16 20:49 af Teddy 🐕*
+
+## 2026-03-16 22:00 — TEKNISK + MONETISERING + INDHOLD session (autonom)
+
+### Growth Analytics System
+- **Analytics script** (`scripts/analytics.mjs`):
+  - Tracker alle newsletters automatisk (stories, words, links, sections)
+  - Content quality score (0-100) baseret på TL;DR, Tool, Stats, Analysis
+  - Consistency streak tracking
+  - Gemmer historiske snapshots i `analytics.json`
+  - Genererer `GROWTH_REPORT.md` med trends og anbefalinger
+- **Første rapport**: 2 issues, 6.5 avg stories, 4 min read time, quality score 50-55/100
+  - Issue #2 mangler TL;DR og stats (skrevet før template-improvement)
+
+### Quality Assurance System
+- **Pre-publish quality check** (`scripts/quality-check.mjs`):
+  - 10-point checklist: TL;DR, Tool, Stats, Analysis, min stories, links, shareable, about, word count, emoji headers
+  - Exit code 0 = ready to publish, 1 = needs fixes
+  - Testet på 2026-03-16: score 65/100 — identificerede missing TL;DR
+
+### Daily Cron Pipeline Forbedret
+- **Newsletter cron opdateret** (daglig kl. 06:00):
+  - Tilføjet TL;DR + stats + analyse i template-instruktioner
+  - Tilføjet quality check step (score < 80 = rewrite)
+  - Tilføjet analytics step (opdater GROWTH_REPORT.md)
+  - Timeout øget til 900s for at give plads til quality iterations
+  - Mål: 80+ quality score før publicering
+
+### Sponsor Outreach Materialet
+- **Sponsor cold outreach** (`promo/SPONSOR_OUTREACH.md`):
+  - 5 færdige email-skabeloner (danske startups, internationale tools, enterprise B2B)
+  - Email 1A: "Vi har skrevet om jer" (soft approach)
+  - Email 1B: "Launch phase pricing" (FOMO)
+  - Email 2A: "We featured you" (affiliate angle)
+  - Email 2B: Affiliate program inquiry
+  - Email 4A: "AI intelligence for your team" (enterprise)
+  - Outreach tracking tabel med alle 10 prospects
+  - Trigger: 50+ subscribers → start Tier 1 outreach
+
+### Product Hunt Launch Kit
+- **Fuldt launch kit** (`promo/PRODUCT_HUNT_KIT.md`):
+  - Produktbeskrivelse, tagline, description (copy-paste klar)
+  - Maker comment (Teddy som AI-agent storytelling)
+  - 3 launch-day tweet varianter
+  - Launch day checklist (10 trin)
+  - Success metrics targets (100+ upvotes, 500+ visitors, 30+ subs)
+  - Foreslået dato: Tirsdag 18. marts 2026
+  - Screenshots at tage listet
+
+### Blokeringer (uændret)
+- **xurl auth** stadig blokeret — auto-tweet queue bygger op
+- **Email service** mangler — localStorage signup er ikke reel email capture
+- [NEEDS_APPROVAL]: Claus skal poste Reddit posts (REDDIT_POSTS.md)
+- [NEEDS_APPROVAL]: Claus skal køre `xurl auth oauth2`
+- [NEEDS_APPROVAL]: Claus skal godkende sponsor outreach emails (SPONSOR_OUTREACH.md)
+- [NEEDS_APPROVAL]: Claus skal oprette Product Hunt konto + uploade screenshots
+
+### Næste skridt (prioriteret)
+1. **Claus → Reddit posts** (copy-paste klar, 4 posts i REDDIT_POSTS.md)
+2. **Claus → xurl auth** (åbner auto-tweet pipeline)
+3. **Claus → Email service** (Formspree, beehiiv, eller ConvertKit)
+4. **Product Hunt launch** (tirsdag 18. eller torsdag 20. marts)
+5. **Sponsor outreach** (når 50+ subscribers)
+6. **Directory submissions** (når email er sat op)
+
+---
+
+*Mission Control: Progress 85%*
+
+*Sidst opdateret: 2026-03-16 22:00 af Teddy 🐕*
