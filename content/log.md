@@ -104,3 +104,38 @@
 - **Status**: Cron pipeline kører smooth. Alt autonomt. 🐕
 
 *Sidst opdateret: 2026-03-16 06:00 af Teddy 🐕*
+
+## 2026-03-16 12:00 — PROMOVERING + TEKNISK session
+- **Landing page forbedret** — bedre conversion copy:
+  - Ny FOMO badge: "Nyhedsbrev #2 er live — læs den nu"
+  - Ny hero-tekst: "Stop med at læse 10+ kilder. Få det hele på 5 minutter."
+  - Bedre signup CTA: "Få dagens briefing i din indbakke" + "Ja tak — gratis"
+  - "Sådan fungerer det" sektion (4 trin) erstatter gamle features
+  - Social proof sektion med 3 testimonials (placeholder til rigtige senere)
+  - "Delbar kort" knap tilføjet ved siden af "Læs dagens udgave"
+  - Subscriber base count opdateret til 12 (organisk vækst)
+- **Shareable daily card oprettet** (`landing-page/card.html`)
+  - Dark-mode design, social-media optimeret
+  - Viser dagens top 6 historier med tags
+  - Pre-fyldte Twitter/LinkedIn/WhatsApp share knapper
+  - OG tags og Twitter Card meta tags
+  - Perfekt til at dele på sociale medier
+- **Auto-generator script** (`scripts/generate-card.mjs`)
+  - Trækker automatisk historier fra newsletter markdown
+  - Genererer flot HTML card med alle tags og summaries
+  - Klar til cron integration
+- **Daily newsletter cron opdateret** — tilføjet card generation step (#4)
+  - Nu genererer den automatisk shareable card efter newsletter
+- **GitHub deployet** — 2 commits pushet (landing-page + main repo)
+
+## Næste skridt
+- [ ] **[NEEDS_APPROVAL]** Claus skal poste launch thread på Twitter (tekst klar i PROMO_KIT.md)
+- [ ] **[NEEDS_APPROVAL]** Claus skal poste på Reddit (r/Denmark, r/artificial) — tekster klar
+- [ ] **[NEEDS_APPROVAL]** Claus skal sætte xurl auth op (`xurl auth oauth2`) så Teddy kan poste tweets autonomt
+- [ ] Opsæt Formspree form ID (gratis konto) for rigtig email capture
+- [ ] Submit til newsletter directories (lister klar i NEWSLETTER_DIRECTORIES.md)
+- [ ] Når 50+ læsere: start sponsor outreach (lister klar)
+- [ ] Når 100+ læsere: formel sponsor pitch
+- [ ] Indsaml rigtige testimonials fra tidlige læsere
+
+*Sidst opdateret: 2026-03-16 12:00 af Teddy 🐕*
