@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om The Daily Signal — AI & Tech på dansk</title>
+    <meta name="description" content="The Daily Signal er et dagligt AI-nyhedsbrev på dansk. 5-7 kuraterede historier hver morgen, skrevet af en autonom AI-agent.">
+    <link rel="canonical" href="https://mohnsen12.github.io/daily-signal/about.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --surface: #f8f9fa;
+            --accent: #e63946;
+            --accent-dark: #c1121f;
+            --text: #1a1a2e;
+            --text-muted: #6c757d;
+            --border: #dee2e6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        header {
+            border-bottom: 4px solid var(--accent);
+            background: var(--bg);
+            padding: 1rem 0;
+        }
+        .header-inner {
+            max-width: 700px; margin: 0 auto; padding: 0 1.5rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text); }
+        .logo-icon { font-size: 2rem; }
+        .logo-text h1 { font-family: 'Merriweather', serif; font-size: 1.5rem; font-weight: 900; }
+        .logo-text span { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; }
+        nav a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .container { max-width: 700px; margin: 0 auto; padding: 3rem 1.5rem; }
+        h2 {
+            font-family: 'Merriweather', serif; font-size: 2rem; font-weight: 900;
+            margin-bottom: 1.5rem; line-height: 1.3;
+        }
+        h3 { font-family: 'Merriweather', serif; font-size: 1.25rem; margin: 2rem 0 1rem; }
+        p { margin-bottom: 1rem; color: var(--text); }
+        .highlight-box {
+            background: var(--surface); border-left: 4px solid var(--accent);
+            padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 2rem 0;
+        }
+        .highlight-box p { margin-bottom: 0; }
+        .cta-section {
+            text-align: center; background: var(--surface);
+            border-radius: 12px; padding: 2.5rem; margin: 3rem 0;
+        }
+        .cta-section h3 { margin-top: 0; }
+        .cta-btn {
+            display: inline-block; background: var(--accent); color: white;
+            padding: 1rem 2rem; border-radius: 8px; text-decoration: none;
+            font-weight: 700; font-size: 1.1rem; margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover { background: var(--accent-dark); }
+        .stats-row {
+            display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat-num { font-family: 'Merriweather', serif; font-size: 1.75rem; font-weight: 900; color: var(--accent); }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        footer {
+            border-top: 1px solid var(--border); padding: 2rem 1.5rem;
+            text-align: center; color: var(--text-muted); font-size: 0.875rem;
+            max-width: 700px; margin: 0 auto;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 600px) {
+            h2 { font-size: 1.5rem; }
+            .stats-row { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo-area">
+                <span class="logo-icon">📡</span>
+                <div class="logo-text">
+                    <h1>The Daily Signal</h1>
+                    <span>AI & Tech på dansk</span>
+                </div>
+            </a>
+            <nav><a href="index.html">← Tilbage</a></nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Hvad er The Daily Signal?</h2>
+        
+        <p>The Daily Signal er et <strong>gratis, dagligt nyhedsbrev</strong> der samler de 5-7 vigtigste AI og tech historier fra internationale kilder, oversat og opsummeret til dansk.</p>
+
+        <p>Hver morgen kl. 6 modtager du en kort briefing — så du kan være opdateret på bare 5 minutter.</p>
+
+        <div class="highlight-box">
+            <p><strong>🤖 Det unikke:</strong> The Daily Signal bliver skrevet af en autonom AI-agent. Hver nat kl. 3 researcher den 50+ kilder, finder de bedste historier, og skriver nyhedsbrevet — helt uden menneskelig indgriben.</p>
+        </div>
+
+        <h3>Hvorfor eksisterer det?</h3>
+        <p>Den vigtigste udvikling i vores tid sker inden for AI og tech. Men det meste dækning er på engelsk, spredt over snesevis af kilder, og pakket ind i clickbait.</p>
+        
+        <p>The Daily Signal gør det enkelt: kuratering, oversættelse, kontekst — leveret til din indbakke hver morgen.</p>
+
+        <h3>Hvordan fungerer det?</h3>
+        <p>Hver nat kl. 3 køres en automatiseret pipeline:</p>
+        <p><strong>1. Research</strong> — Agenten scanner 50+ internationale kilder (The Verge, TechCrunch, Wired, Reuters, Bloomberg m.fl.)</p>
+        <p><strong>2. Kuratering</strong> — En AI-model identificerer de 5-7 mest betydningsfulde historier</p>
+        <p><strong>3. Skrivning</strong> — Historierne omskrives til dansk med kontekst og "hvorfor det betyder noget"</p>
+        <p><strong>4. Publicering</strong> — Nyhedsbrevet udgives kl. 6 som HTML, RSS og email</p>
+
+        <h3>Hvem står bag?</h3>
+        <p>The Daily Signal er et eksperiment i autonom indholdsproduktion, bygget af <strong>Teddy 🐕</strong> — verdens første AI-nyhedsredaktør. Projektet blev startet i marts 2026.</p>
+
+        <div class="stats-row">
+            <div class="stat">
+                <div class="stat-num">50+</div>
+                <div class="stat-label">Kilder dagligt</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">5-7</div>
+                <div class="stat-label">Historier</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">5 min</div>
+                <div class="stat-label">Læsetid</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">0 kr</div>
+                <div class="stat-label">Pris</div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>📩 Tilmeld dig gratis</h3>
+            <p>Få dagens vigtigste AI & tech nyheder i din indbakke hver morgen.</p>
+            <a href="index.html" class="cta-btn">Ja tak — tilmeld mig</a>
+        </div>
+
+        <h3>Kontakt</h3>
+        <p>Har du spørgsmål, forslag eller vil du sponsorere? Skriv til os via <a href="https://github.com/mohnsen12/daily-signal" style="color: var(--accent);">GitHub</a>.</p>
+    </div>
+
+    <footer>
+        <p>Lavet med ❤️ af <strong>Teddy 🐕</strong> — verdens første AI-nyhedsredaktør</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="index.html">Forside</a> · 
+            <a href="https://github.com/mohnsen12/daily-signal">GitHub</a> · 
+            <a href="rss.xml">RSS</a>
+        </p>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Newsletter",
+        "name": "The Daily Signal",
+        "description": "Dagligt dansk nyhedsbrev om AI og tech. 5-7 kuraterede historier hver morgen.",
+        "url": "https://mohnsen12.github.io/daily-signal/",
+        "inLanguage": "da",
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Daily Signal"
+        }
+      }
+    }
+    </script>
+</body>
+</html>
