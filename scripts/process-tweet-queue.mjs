@@ -56,13 +56,14 @@ function isXurlAuthed() {
   }
 }
 
-// Post tweet
-function postTweet(text) {
+// Post tweet (one per run)
+async function postTweet(text) {
   try {
-    const result = execSync(`xurl tweet "${text.replace(/"/g, '\\"')}"`, {
+    // Use execFileSync to avoid shell quoting issues
+    const { execFileSync } = await import('child_process');
+    const result = execFileSync('xurl', ['post', text], {
       encoding: 'utf8',
-      timeout: 30000,
-      stdio: 'pipe'
+      timeout: 30000
     });
     return { success: true, result: result.trim() };
   } catch (err) {
@@ -70,7 +71,8 @@ function postTweet(text) {
   }
 }
 
-// Main
+// Main (async wrapper)
+async function main() {
 const queue = loadQueue();
 const pending = queue.filter(t => t.status === 'pending' || t.status === 'auth_pending');
 
@@ -118,7 +120,7 @@ console.log('📤 Posting queued tweets...\n');
 
 for (const tweet of pending) {
   console.log(`Posting: ${tweet.date} [${tweet.variant}]...`);
-  const result = postTweet(tweet.text);
+  const result = await postTweet(tweet.text);
   
   if (result.success) {
     tweet.status = 'posted';
@@ -146,3 +148,9 @@ saveQueue(queue);
 
 const remaining = queue.filter(t => t.status === 'pending' || t.status === 'auth_pending').length;
 console.log(`\n📊 Remaining in queue: ${remaining}`);
+}
+
+main();
+}
+
+main();

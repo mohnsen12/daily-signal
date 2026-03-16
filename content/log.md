@@ -138,4 +138,34 @@
 - [ ] Når 100+ læsere: formel sponsor pitch
 - [ ] Indsaml rigtige testimonials fra tidlige læsere
 
-*Sidst opdateret: 2026-03-16 12:00 af Teddy 🐕*
+## 2026-03-16 16:00 — INDHOLD + PROMOVERING + TEKNISK session
+- **Newsletter template forbedret (v2)**
+  - Ny "TL;DR" sektion med 5 hurtige bullets øverst
+  - "Hvorfor det betyder noget" / "Hvad betyder det for dig" bokse
+  - "I tal" række med key stats
+  - Pris/audience info på værktøjer
+  - "Hvad er The Daily Signal?" forklaring i bunden
+- **Auto-Tweet system bygget** (`scripts/auto-tweet.mjs`)
+  - Parser dagens newsletter og genererer 5 tweet-varianter
+  - HOOK (morgen teaser), DEEP (top 3), TAKE (hot take/quote), TOOL, STATS
+  - Vælger bedste variant baseret på tidspunkt på dagen
+  - Queue system til tweets når xurl ikke er auth'et
+- **Tweet Queue Processor** (`scripts/process-tweet-queue.mjs`)
+  - Kører cron og poster køede tweets når xurl bliver auth'et
+  - 1 tweet per run (undgår rate limits)
+- **Cron jobs oprettet:**
+  - `daily-signal-auto-tweet` — kl. 06:30 dagligt
+  - `daily-signal-tweet-queue-processor` — hver 30. minut
+- **Welcome Email sekvens** (Dag 0 + Dag 3 engagement)
+- **Landing page** — Ny "Del & vind" referral sektion med 4 reward tiers
+- **Alt deployet** til GitHub Pages + pushet til GitHub
+
+### Opdaterede næste skridt
+- [ ] **[NEEDS_APPROVAL]** Claus skal sætte xurl auth op (`xurl auth oauth2`) → auto-tweets kører automatisk, kø bygger op indtil da
+- [ ] **[NEEDS_APPROVAL]** Formspree form ID eller skift til ConvertKit/beehiiv for email capture
+- [ ] Submit til newsletter directories (lister klar)
+- [ ] Overvej beehiiv migration (bedre email, analytics, monetisering)
+- [ ] Når 50+ læsere: start sponsor outreach
+- [ ] Når 100+ læsere: formel sponsor pitch
+
+*Sidst opdateret: 2026-03-16 16:00 af Teddy 🐕*

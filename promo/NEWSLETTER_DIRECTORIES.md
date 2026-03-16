@@ -1,31 +1,43 @@
-# Newsletter Directory Submissions
+# Newsletter Directory Submissions — v2 (Opdateret 2026-03-16)
 
-Gratis directories hvor The Daily Signal kan submites for backlinks + discoverability.
-Ingen auth påkrævet — kun web-formularer.
+Aktive directories verificeret og klar til submission.
 
-## ✅ Kan submites nu
+## ✅ Verificeret aktive
 
 | # | Directory | URL | Status | Notes |
 |---|-----------|-----|--------|-------|
-| 1 | LetterList | letterlist.com/submit | ⏳ | Gratis, hurtig approval |
-| 2 | Newsletters.co | newsletters.co/submit | ⏳ | Stort katalog |
-| 3 | InboxStash | inboxstash.com | ⏳ | AI/tech fokus |
-| 4 | The Sample | thesample.ai | ⏳ | Cross-promotion network |
-| 5 | Amazing Newsletters | amazingnewsletters.com/submit | ⏳ | Community-drevet |
-| 6 | Newsletter Stack | newsletterstack.com | ⏳ | Substack/indie fokus |
-| 7 | LetterDrop | letterdrop.com/newsletters | ⏳ | Creator economy |
-| 8 | InboxReads | inboxreads.co | ⏳ | Kategoriseret |
-| 9 | Papyrus | papyrus.news | ⏳ | Ny spiller |
-| 10 | ReadTheory | readtheory.org/newsletters | ⏳ | Uddannelse+tech |
+| 1 | Newsdrop.io | newsdrop.io/newsletters | ⏳ | 633 newsletters, har AI-kategori |
+| 2 | Letterlist | letterlist.com/submit | ⏳ | Stort katalog, gratis |
+| 3 | Best Newsletters | bestnewsletters.co | ⏳ | Kategoriseret, aktiv |
+| 4 | ContentQuant | contentquant.io/newsletters | ⏳ | Ny spiller, tech-fokus |
+| 5 | Papyrus | papyrus.news | ⏳ | Ny spiller |
+| 6 | InboxReads | inboxreads.co | ⏳ | Kategoriseret |
+
+## ⏳ God men lang ventetid
+
+| # | Directory | URL | Wait Time | Notes |
+|---|-----------|-----|-----------|-------|
+| 7 | Amazing Newsletters | amazingnewsletters.com/submit | 65 dage (gratis) | Betalt for hurtigere |
+| 8 | The Sample (Yakread) | thesample.ai | N/A | Nu en reader app, ikke directory |
+| 9 | Newsletter Stack | newsletterstack.com | Ukendt | Tjek aktuel status |
+
+## ❌ Ikke længere aktive
+
+| Directory | Issue |
+|-----------|-------|
+| Newsletters.co | Redirecter til scottoldford.com |
+| InboxStash | Domæne til salg |
+| LetterDrop | Ukendt status |
+| ReadTheory | Ukendt status |
 
 ## ⏳ Kræver mere etableret newsletter
 
 | # | Directory | URL | Requirement |
 |---|-----------|-----|-------------|
-| 11 | Product Hunt | producthunt.com | Bedst ved launch day |
-| 12 | Hacker News | news.ycombinator.com | Show HN format |
-| 13 | TLDR | tldr.tech | Curated, svær at komme ind |
-| 14 | Indie Hackers | indiehackers.com | Community engagement |
+| 10 | Product Hunt | producthunt.com | Bedst ved launch day |
+| 11 | Hacker News | news.ycombinator.com | Show HN format |
+| 12 | TLDR | tldr.tech | Curated, svær at komme ind |
+| 13 | Indie Hackers | indiehackers.com | Community engagement |
 
 ## 📋 Submission Template
 
@@ -41,13 +53,6 @@ Link: https://mohnsen12.github.io/daily-signal/
 RSS: https://mohnsen12.github.io/daily-signal/rss.xml
 ```
 
-## 🎯 Prioriterede handlinger
-
-1. **I dag:** Submit til #1-5 (LetterList, Newsletters.co, InboxStash, The Sample, Amazing Newsletters)
-2. **I morgen:** Submit til #6-10
-3. **Når vi har 20+ læsere:** Product Hunt launch
-4. **Når vi har 50+ læsere:** Hacker News Show HN
-
 ---
 
-*Sidst opdateret: 2026-03-15 af Teddy 🐕*
+*Sidst opdateret: 2026-03-16 af Teddy 🐕*
