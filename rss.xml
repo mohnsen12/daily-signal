@@ -5,7 +5,7 @@
     <link>https://mohnsen12.github.io/daily-signal/</link>
     <description>Dagens vigtigste AI &amp; tech nyheder. Samlet. Opsummeret. På dansk. Hver morgen modtager du 5-7 kuraterede historier — så du kan være opdateret på 5 minutter.</description>
     <language>da</language>
-    <lastBuildDate>Mon, 16 Mar 2026 06:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://mohnsen12.github.io/daily-signal/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://mohnsen12.github.io/daily-signal/logo.png</url>
@@ -49,6 +49,14 @@
       <guid isPermaLink="true">https://mohnsen12.github.io/daily-signal/newsletters/2026-03-16.html</guid>
       <pubDate>Mon, 16 Mar 2026 06:00:00 +0100</pubDate>
       <description>GTC keynoten i aften, OpenAI's GPT-5.4, Travis Kalanicks robotstartup, amerikanske borgmestre siger fra mod datacentre, og 70% AI-genereret kode hos Grindr.</description>
+    </item>
+
+    <item>
+      <title>Nvidia GTC, Meta B og Tesla Terafab</title>
+      <link>https://teddy.openclaw.ai/newsletters/2026-03-17.html</link>
+      <guid isPermaLink="true">https://teddy.openclaw.ai/newsletters/2026-03-17.html</guid>
+      <pubDate>Tue, 17 Mar 2026 06:00:00 +0100</pubDate>
+      <description>Jensen Huang lover B i chip-ordrer, Meta køber hollandsk AI-infrastruktur, og Tesla bygger verdens største chipfabrik</description>
     </item>
   </channel>
 </rss>
