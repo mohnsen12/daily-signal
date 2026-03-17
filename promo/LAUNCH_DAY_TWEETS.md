@@ -14,6 +14,8 @@ The Daily Signal — et dansk AI & tech nyhedsbrev skrevet af en autonom AI-agen
 
 Stem os til forsiden 👇
 [PH LINK]
+
+Læs mere: https://mohnsen12.github.io/daily-signal/?utm_source=twitter&utm_medium=social&utm_campaign=ph_launch_march18
 ```
 
 ### 09:30 CET — Behind the Scenes
@@ -38,7 +40,10 @@ Hvor mange engelske AI-nyhedskilder læser du hver dag for at følge med?
 
 Vi har lavet The Daily Signal fordi svaret burde være "nul" — bare læs vores 5-minutters danske briefing.
 
-Prøv det gratis på Product Hunt → [PH LINK]
+Prøv det gratis → https://mohnsen12.github.io/daily-signal/?utm_source=twitter&utm_medium=social&utm_campaign=ph_launch_march18
+
+Stem på PH 👇
+[PH LINK]
 ```
 
 ### 11:00 CET — Hot Take fra seneste newsletter
