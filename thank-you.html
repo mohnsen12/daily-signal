@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tak! — The Daily Signal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #ffffff;
+            color: #1a1a2e;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 560px;
+            text-align: center;
+        }
+        .checkmark {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: bounceIn 0.6s ease;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+        .ph-card {
+            background: linear-gradient(135deg, #ff6154 0%, #ff3d00 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .ph-card h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .ph-card p {
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .ph-btn {
+            display: inline-block;
+            background: white;
+            color: #ff3d00;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .ph-btn:hover { transform: scale(1.05); }
+        .share-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #dee2e6;
+        }
+        .share-section h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #6c757d;
+        }
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.625rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.2s;
+        }
+        .share-btn:hover { opacity: 0.85; }
+        .share-twitter { background: #1da1f2; }
+        .share-linkedin { background: #0077b5; }
+        .share-whatsapp { background: #25d366; }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #e63946;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark">✅</div>
+        <h1>Du er på listen!</h1>
+        <p class="subtitle">Tak for din tilmelding. Du får dagens vigtigste AI & tech nyheder i din indbakke hver morgen kl. 6.</p>
+
+        <div class="ph-card">
+            <h2>🚀 Vi er på Product Hunt!</h2>
+            <p>Hjælp os med at komme på forsiden. Et upvote gør en kæmpe forskel for en lille nyhedsbrev som vores.</p>
+            <a href="https://www.producthunt.com/" id="ph-link" class="ph-btn" target="_blank">Stem på Product Hunt →</a>
+        </div>
+
+        <div class="share-section">
+            <h3>Del med en ven der elsker AI & tech</h3>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text=Jeg%20har%20lige%20tilmeldt%20mig%20The%20Daily%20Signal%20%E2%80%94%20et%20dansk%20AI%20%26%20tech%20nyhedsbrev.%20Prøv%20det!&url=https://mohnsen12.github.io/daily-signal/" class="share-btn share-twitter" target="_blank">🐦 Twitter</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://mohnsen12.github.io/daily-signal/" class="share-btn share-linkedin" target="_blank">💼 LinkedIn</a>
+                <a href="https://wa.me/?text=Prøv%20The%20Daily%20Signal%20%E2%80%94%20dansk%20AI%20%26%20tech%20nyhedsbrev%3A%20https://mohnsen12.github.io/daily-signal/" class="share-btn share-whatsapp" target="_blank">💬 WhatsApp</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Tilbage til forsiden</a>
+    </div>
+
+    <script>
+        // Track conversion source
+        const params = new URLSearchParams(window.location.search);
+        const source = params.get('source') || 'direct';
+        try {
+            const conversions = JSON.parse(localStorage.getItem('ds_conversions') || '[]');
+            conversions.push({ source, timestamp: new Date().toISOString() });
+            localStorage.setItem('ds_conversions', JSON.stringify(conversions));
+        } catch(e) {}
+    </script>
+</body>
+</html>

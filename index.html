@@ -417,6 +417,11 @@
             document.getElementById('email').value = '';
             btn.textContent = 'Tilmeld dig';
             btn.disabled = false;
+
+            // Redirect to thank-you page after brief delay
+            setTimeout(function() {
+                window.location.href = 'thank-you.html?source=' + (new URLSearchParams(window.location.search).get('utm_source') || 'landing');
+            }, 1500);
         }
         
         // Allow Enter key
