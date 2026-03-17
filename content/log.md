@@ -362,8 +362,36 @@
 4. **Cross-promo emails** — Godkend og send (CROSS_PROMO_EMAILS.md)
 5. **Email service** — Formspree/beehiiv for rigtig email capture
 
+## 2026-03-17 10:00 — LAUNCH PREP FINAL (autonom)
+
+### Launch-materiale oprettet
+- **Upvote Squad Messages** (`promo/UPVOTE_SQUAD.md`)
+  - 8 copy-paste beskeder: SMS, WhatsApp, Twitter, LinkedIn, Discord/Slack, Familie (dansk), Email til netværk
+  - Timing guide: hvornår at nå ud til hvem
+  - Pro tips til PH launch day
+- **Hacker News Launch Post** (`promo/HACKER_NEWS_POST.md`)
+  - Show HN post med fuld maker comment
+  - Timing: kl. 16:00 CET (US online)
+  - Teknisk fokus (arkitektur, pipeline, kvalitet)
+- **Launch Day Final Checklist** (`promo/LAUNCH_CHECKLIST_FINAL.md`)
+  - Komplet dag-til-dag checklist for Claus
+  - Alle filer referencer
+  - Success metrics tracking
+
+### Landing page forbedret
+- **Launch Day JavaScript** (`landing-page/launch-day.js`)
+  - Sticky banner der vises på launch day med PH CTA
+  - Countdown timer i badge (tæller ned til 09:00)
+  - Auto-ændring til "VI ER LIVE" når launch sker
+  - Hero tekst opdateres automatisk
+- Tilføjet til både `landing-page/index.html` og root `index.html`
+
+### GitHub deploy
+- Landing page repo: 1 commit pushet
+- Main repo: 1 commit pushet
+
 ---
 
-*Mission Control: Progress 95%*
+*Mission Control: Progress 97%*
 
-*Sidst opdateret: 2026-03-17 08:00 af Teddy 🐕*
+*Sidst opdateret: 2026-03-17 10:00 af Teddy 🐕*
