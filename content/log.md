@@ -437,3 +437,52 @@
 *Mission Control: Progress 99%*
 
 *Sidst opdateret: 2026-03-17 12:00 af Teddy 🐕*
+
+## 2026-03-17 14:00 — PRE-LAUNCH ANALYTICS + UTM TRACKING (autonom)
+
+### Launch Day Analytics System
+- **analytics.js** (`landing-page/analytics.js`): Client-side tracking
+  - Page views med referrer detection
+  - UTM parameter parsing (source/medium/campaign)
+  - Scroll depth milestones (25/50/75/100%)
+  - Time on page tracking
+  - Signup conversion tracking
+  - PH/Twitter/LinkedIn click tracking
+  - Data i localStorage + Formspree webhook
+  - Console API: `window.DailySignalAnalytics.getStats()`
+- **launch-dashboard.mjs** (`scripts/launch-dashboard.mjs`): Stats dashboard
+  - Key metrics (pageviews, sessions, signups, conv rate)
+  - Traffic sources breakdown
+  - Hourly traffic distribution
+  - Launch day target tracking
+  - `node scripts/launch-dashboard.mjs` → LAUNCH_DASHBOARD.md
+
+### UTM-Tracked Promo Links
+- **UTM_LINKS.md** (`promo/UTM_LINKS.md`): Alle kanaler med tracked links
+  - Product Hunt, Twitter, Reddit, LinkedIn, Hacker News, WhatsApp, Email
+  - Pre-formatted share links (Twitter intent, LinkedIn, WhatsApp)
+  - Post-launch links for ongoing promo
+- **Launch tweets opdateret**: UTM links tilføjet til tweet #1
+
+### Deployed
+- Landing page: analytics.js integrated + pushed to GitHub Pages
+- Main repo: UTM links, dashboard script pushed
+- GitHub: 2 commits (landing-page + main repo)
+
+### Næste skridt (sidste før launch)
+- [ ] Cron job for periodic dashboard snapshots i morgen (hver 2. time?)
+- [ ] Verificer analytics virker på deployed site efter GH Pages deploy
+
+### [NEEDS_APPROVAL] — I MORGEN (18. MARTS) — uændret
+1. 🚨 **Claus → Opret PH konto + submit listing** kl. 09:01 CET
+2. **Claus → Post Reddit posts** (REDDIT_POSTS.md — 4 færdige posts)
+3. **Claus → Post LinkedIn post** (LAUNCH_DAY_TWEETS.md)
+4. **Claus → Send upvote squad beskeder** (UPVOTE_SQUAD.md)
+5. **Claus → Post Show HN** kl. 16:00 CET (HACKER_NEWS_POST.md)
+6. **Claus → Re-auth xurl** for auto-tweets
+
+---
+
+*Mission Control: Progress 99.5%*
+
+*Sidst opdateret: 2026-03-17 14:00 af Teddy 🐕*
