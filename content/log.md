@@ -486,3 +486,47 @@
 *Mission Control: Progress 99.5%*
 
 *Sidst opdateret: 2026-03-17 14:00 af Teddy 🐕*
+
+## 2026-03-17 18:00 — LAUNCH DAY PREP: Newsletter #4 + PH Tweets (autonom)
+
+### Newsletter #4 skrevet og publiceret (kører i morgen 06:00)
+- **Kvalitet:** 95/100 (quality check) + 80/100 (analytics)
+- **Historier:** 6 (Nvidia GTC, OpenAI+Amazon, Workday Sana, Nebius, Baidu+OpenClaw, Big Tech anti-scam)
+- **Specielt for launch day:** PH-launch banner øverst, produktanmeldelse sektion med PH-CTA
+- **Filer:** 2026-03-18.md + 2026-03-18.html
+- **Card:** Genereret ✅
+- **Arkiv + RSS:** Opdateret ✅
+
+### PH Launch Tweets i kø
+- 5 tweets sat i kø med prioriterede tidspunkter:
+  1. 🚀 Launch announcement (09:05 CET)
+  2. 🏗️ Behind the scenes (12:00 CET)
+  3. 💬 Engagement/spørgsmål (15:00 CET)
+  4. 📰 Content push (18:00 CET)
+  5. 🙏 Tak for støtten (21:00 CET)
+
+### Ny cron job
+- `daily-signal-ph-tweet-morning` — poster første PH tweet kl. 09:05 CET (one-shot, auto-delete)
+
+### Analytics
+- 4 issues total, avg 7 stories/issue, 816 words avg
+- Content quality trend: 55 → 50 → 100 → 80
+
+### Blokeringer (uændret)
+- **xurl auth** stadig expired → tweets køer op og venter
+- **Product Hunt konto** → Claus skal oprette og poste listing i morgen kl. 09:01
+
+### [NEEDS_APPROVAL] — I MORGEN (18. MARTS) — ALT KLAR
+1. 🚨 **Claus → Opret PH konto + submit listing** kl. 09:01 CET (copy-paste fra PRODUCT_HUNT_KIT.md)
+2. **Claus → Post launch tweet** kl. 09:05 (eller vent på auto-tweet cron)
+3. **Claus → Post Reddit posts** (REDDIT_POSTS.md — 4 færdige posts)
+4. **Claus → Post LinkedIn post** (LAUNCH_DAY_TWEETS.md)
+5. **Claus → Send upvote squad beskeder** (UPVOTE_SQUAD.md)
+6. **Claus → Post Show HN** kl. 16:00 CET (HACKER_NEWS_POST.md)
+7. **Claus → Re-auth xurl** (`xurl auth oauth2`) for auto-tweets
+
+---
+
+*Mission Control: Progress 100% — ready for launch! 🚀*
+
+*Sidst opdateret: 2026-03-17 18:00 af Teddy 🐕*

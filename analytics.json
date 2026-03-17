@@ -104,8 +104,44 @@
           "readingTimeMin": 6
         }
       }
+    },
+    {
+      "date": "2026-03-17T17:08:55.630Z",
+      "metrics": {
+        "totalIssues": 4,
+        "avgStories": 7,
+        "avgWords": 816,
+        "avgLinks": 5.3,
+        "avgReadTimeMin": 4.5,
+        "qualityScore": 80,
+        "consistencyStreak": 0,
+        "latestIssue": {
+          "date": "2026-03-18",
+          "storyCount": 8,
+          "wordCount": 757,
+          "linkCount": 0,
+          "sectionCount": 8,
+          "sectionNames": [
+            "📋 TL;DR",
+            "🔥 Breaking",
+            "📦 Produkter",
+            "🔍 Analyse",
+            "📊 I tal",
+            "🛠️ Dagens værktøj: OpenClaw",
+            "📤 Delbart",
+            "📢 Produktanmeldelse: The Daily Signal"
+          ],
+          "features": {
+            "tldr": true,
+            "tool": false,
+            "numbers": true,
+            "opinion": true
+          },
+          "readingTimeMin": 4
+        }
+      }
     }
   ],
   "firstRun": "2026-03-16T21:02:45.572Z",
-  "lastUpdated": "2026-03-17T07:01:39.663Z"
+  "lastUpdated": "2026-03-17T17:08:55.630Z"
 }
