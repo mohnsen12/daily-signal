@@ -6,5 +6,13 @@
     "queuedAt": "2026-03-16T15:03:51.982Z",
     "status": "failed",
     "error": "Command failed: xurl post \"\\\"70% af al kode checkes nu ind af AI. Vi er ikke på vej mod en fremtid hvor AI skriver software — vi er der allerede.\\\"\\n\\n— The Daily Signal, 2026-03-16\\n\\nFlere AI-nyheder → https://mohnsen12.github.io/daily-signal/\""
+  },
+  {
+    "date": "2026-03-17",
+    "variant": "hook",
+    "text": "📡 Dagens AI-nyheder er klar!\n\n🔥 Nvidia GTC: Huang lover $1B i chip-ordrer — og bygger bro til Disney og rummet\n\nOg 7 flere historier i dagens udgave.\n\nLæs gratis → https://mohnsen12.github.io/daily-signal/",
+    "queuedAt": "2026-03-17T05:30:06.188Z",
+    "status": "failed",
+    "error": "Command failed: xurl post 📡 Dagens AI-nyheder er klar!\n\n🔥 Nvidia GTC: Huang lover $1B i chip-ordrer — og bygger bro til Disney og rummet\n\nOg 7 flere historier i dagens udgave.\n\nLæs gratis → https://mohnsen12.github.io/daily-signal/"
   }
 ]

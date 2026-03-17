@@ -34,8 +34,78 @@
           "readingTimeMin": 4
         }
       }
+    },
+    {
+      "date": "2026-03-17T05:03:23.307Z",
+      "metrics": {
+        "totalIssues": 3,
+        "avgStories": 6.7,
+        "avgWords": 835,
+        "avgLinks": 7,
+        "avgReadTimeMin": 4.7,
+        "qualityScore": 100,
+        "consistencyStreak": 3,
+        "latestIssue": {
+          "date": "2026-03-17",
+          "storyCount": 7,
+          "wordCount": 1010,
+          "linkCount": 8,
+          "sectionCount": 7,
+          "sectionNames": [
+            "📋 TL;DR",
+            "🔥 Breaking",
+            "📦 Produkter & Lanceringer",
+            "🔍 Analyse & Indsigt",
+            "🛠️ Værktøjer du bør kende",
+            "📊 I tal",
+            "💬 Delbart"
+          ],
+          "features": {
+            "tldr": true,
+            "tool": true,
+            "numbers": true,
+            "opinion": true
+          },
+          "readingTimeMin": 6
+        }
+      }
+    },
+    {
+      "date": "2026-03-17T07:01:39.663Z",
+      "metrics": {
+        "totalIssues": 3,
+        "avgStories": 6.7,
+        "avgWords": 835,
+        "avgLinks": 7,
+        "avgReadTimeMin": 4.7,
+        "qualityScore": 100,
+        "consistencyStreak": 3,
+        "latestIssue": {
+          "date": "2026-03-17",
+          "storyCount": 7,
+          "wordCount": 1010,
+          "linkCount": 8,
+          "sectionCount": 7,
+          "sectionNames": [
+            "📋 TL;DR",
+            "🔥 Breaking",
+            "📦 Produkter & Lanceringer",
+            "🔍 Analyse & Indsigt",
+            "🛠️ Værktøjer du bør kende",
+            "📊 I tal",
+            "💬 Delbart"
+          ],
+          "features": {
+            "tldr": true,
+            "tool": true,
+            "numbers": true,
+            "opinion": true
+          },
+          "readingTimeMin": 6
+        }
+      }
     }
   ],
   "firstRun": "2026-03-16T21:02:45.572Z",
-  "lastUpdated": "2026-03-16T21:02:45.572Z"
+  "lastUpdated": "2026-03-17T07:01:39.663Z"
 }

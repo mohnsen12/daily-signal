@@ -77,7 +77,7 @@ if (storyCount >= 5) {
 const sections = content.split(/^## /m).slice(1);
 const storiesWithoutLinks = sections.filter(s => {
   const title = s.split('\n')[0];
-  if (title.match(/TL;DR|Hurtigt|Delbart|Signal|Værktøj|Dagens/i)) return false;
+  if (title.match(/TL;DR|Hurtigt|Delbart|Signal|Værktøj|Dagens|I tal/i)) return false;
   return !s.includes('http');
 }).map(s => s.split('\n')[0]);
 
