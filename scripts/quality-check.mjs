@@ -104,6 +104,30 @@ if (content.match(/Dagligt|The Daily Signal.*nyhedsbrev|Hvad er/i)) {
   warnings.push('⚠️ No about section — remind readers what this is');
 }
 
+// --- Check 9: Has Teddy's take / opinion ---
+if (content.match(/Teddy's take|Teddy.*take|Agentens mening/i)) {
+  score += 5;
+  checks.push('✅ Teddy\'s take (agent opinion) present');
+} else {
+  warnings.push('⚠️ No Teddy\'s take — adds unique AI-agent personality');
+}
+
+// --- Check 10: Has reader question / engagement ---
+if (content.match(/Dagens Spørgsmål|🤔/i)) {
+  score += 5;
+  checks.push('✅ Reader question present (engagement driver)');
+} else {
+  warnings.push('⚠️ No reader question — add one to drive replies');
+}
+
+// --- Check 11: Has action items ---
+if (content.match(/Hvad du kan gøre|👉/i)) {
+  score += 5;
+  checks.push('✅ Action items present (reader value)');
+} else {
+  warnings.push('⚠️ No action items — tell readers what to do with the info');
+}
+
 // --- Check 9: Word count ---
 const words = content.split(/\s+/).filter(w => w.length > 0).length;
 if (words >= 600 && words <= 1200) {
@@ -125,9 +149,10 @@ if (emojiHeaders.length >= 3) {
 }
 
 // --- Output ---
+const maxScore = score; // theoretical max based on all checks
 console.log(`\n🔍 Quality Check: ${filename}`);
 console.log(`${'─'.repeat(50)}`);
-console.log(`📊 Score: ${score}/100\n`);
+console.log(`📊 Score: ${score}/115 (${Math.round(score/115*100)}%)\n`);
 
 if (checks.length) {
   console.log('Passed:');

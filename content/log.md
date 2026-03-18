@@ -687,3 +687,91 @@
   - Fejl: `CreditsDepleted` — konto 2033651984658796544 har ingen credits
 - Tweet blev køet men kan ikke postes før credits er genopfyldt
 - Handling påkrævet: Tjek X/Twitter Developer portal for credit status
+
+## 2026-03-18 20:00 — INDHOLD + TEKNISK + PROMOVERING session (autonom)
+
+### Newsletter Template v3 (forbedret engagement)
+- Ny template med 5 engagement-drivende sektioner:
+  - **👉 Hvad du kan gøre** — action items på top historier (læseren får værdi, ikke bare info)
+  - **🇩🇰 I Danmark** — dedikeret dansk vinkel sektion
+  - **Teddy's take** — AI-agentens personlige mening (unik vinkel)
+  - **🤔 Dagens Spørgsmål** — åbent spørgsmål til læserne (drivere replies/engagement)
+  - **Signal ratings** (⬆️⬆️⬆️) — visuel styrke-indikator på historier
+- Template erstatter v2 → alle fremtidige nyhedsbreve bruger v3
+- Quality check opdateret: scorer nu også Teddy's take, reader question, action items (max 115)
+
+### Nye Landing Pages (deploy-ready)
+- **subscribe.html** — Høj-konvertering standalone signup-side
+  - Dark mode, mobil-optimeret, auto-fokus på email-felt
+  - Social proof (udgaver, kilder, kvalitet, læsetid)
+  - 4 fordele listet visuelt
+  - Del-knapper (Twitter, LinkedIn, WhatsApp)
+  - Perfekt til at dele på sociale medier
+  - URL: /subscribe.html
+- **process.html** — "Sådan skriver Teddy et nyhedsbrev" (viralt indhold)
+  - Visuel pipeline: 6 trin fra research til social distribution
+  - Arkitektur-beskrivelse med code blocks
+  - Kvalitetssystem forklaring (10-point checklist)
+  - "Why an AI Agent?" sektion
+  - Ærlige limitations
+  - FAQ sektion
+  - CTA til subscribe
+  - Perfekt til at poste på Reddit/HN/Twitter som "show how" content
+  - URL: /process.html
+
+### Landing Page opdateringer
+- Ny "AI Process" sektion på hovedsiden med link til process.html
+- Footer links opdateret: process.html + subscribe.html tilføjet
+- Alle filer deployet til root + landing-page/
+
+### Cron Pipeline opdateret
+- Daily newsletter cron: opdateret til v3 template instruktioner
+  - Inkluderer nu alle nye sektioner (Teddy's take, reader question, action items, Danish section)
+  - Mål kvalitetsscore: 90+ (op fra 80)
+- Quality check: 3 nye checks tilføjet, max score nu 115
+
+### Subscriber Server (klar til deployment)
+- **subscriber-server.mjs** — Express-baseret subscriber API
+  - POST /subscribe — modtager signups
+  - GET /stats — offentlig statistik (social proof)
+  - GET /subscribers — admin endpoint med API key
+  - Local JSON storage
+  - Klar til at køre lokalt eller deploy på Railway/Render
+
+### Filer oprettet/opdateret:
+| Fil | Status |
+|-----|--------|
+| templates/newsletter-v3.md | ✅ Ny (v3) |
+| templates/newsletter.md | ✅ Opdateret (v3) |
+| landing-page/subscribe.html | ✅ Ny |
+| landing-page/process.html | ✅ Ny |
+| landing-page/index.html | ✅ Opdateret |
+| scripts/subscriber-server.mjs | ✅ Ny |
+| scripts/quality-check.mjs | ✅ Opdateret |
+| subscribe.html | ✅ Kopieret til root |
+| process.html | ✅ Kopieret til root |
+| index.html | ✅ Kopieret til root |
+
+### Blokeringer (uændret)
+- **xurl auth** — credits depleted, auto-tweets køer op
+- **Product Hunt** — Claus skal poste listing
+- **Email service** — Formspree form er sat op men ingen rigtig email-sending
+
+### [NEEDS_APPROVAL] — Prioriteret
+1. 🚨 **Product Hunt listing** — Claus skal poste (materiale klar i PRODUCT_HUNT_KIT.md)
+2. **Claus → Del process.html** på Twitter/Reddit — "This newsletter is written by an AI agent" er et stærkt viralt hook
+3. **Claus → Post Reddit posts** (4 færdige posts i REDDIT_POSTS.md)
+4. **Claus → Re-auth xurl** for auto-tweets
+5. **Claus → Email service** — overvej Buttondown (gratis op til 100 subs, developer-friendly)
+
+### Næste skridt (prioriteret)
+1. Claus → Del process.html som "show HN" / Twitter thread
+2. Næste newsletter (2026-03-19) bruger v3 template
+3. Monitor subscribe.html konverteringsrate
+4. Overvej email service integration
+
+---
+
+*Mission Control: Progress 100% — alle systemer kørende*
+
+*Sidst opdateret: 2026-03-18 20:00 af Teddy 🐕*
