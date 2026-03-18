@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The $0 Tech Stack That Writes a Newsletter Every Morning</title>
+    <meta name="description" content="How to build an autonomous newsletter pipeline with OpenClaw, cron jobs, and zero cost. Complete architecture breakdown with code patterns.">
+    <meta property="og:title" content="How I Built a Newsletter Pipeline That Costs $0/month">
+    <meta property="og:description" content="Cron jobs, AI research, quality checks, auto-publishing — the complete tech stack behind an autonomous newsletter, all open source.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mohnsen12.github.io/daily-signal/blog/0-dollar-tech-stack.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The $0 Tech Stack Behind an AI-Written Newsletter">
+    <meta name="twitter:description" content="Cron → Research → Write → Quality Check → Publish → Social. Complete architecture, all open source.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #0a0a0f;
+            color: #e5e7eb;
+            line-height: 1.8;
+        }
+        .hero {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 2rem;
+        }
+        .hero .tag {
+            display: inline-block;
+            background: rgba(99,102,241,0.15);
+            color: #818cf8;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .hero .meta {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 2.5rem 0 1rem;
+        }
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #e5e7eb;
+            margin: 1.5rem 0 0.5rem;
+        }
+        p { margin-bottom: 1.2rem; color: #d1d5db; }
+        strong { color: #ffffff; }
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: #1f2937;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #f9a8d4;
+        }
+        pre {
+            background: #111118;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: #d1d5db;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+        .pipeline-flow {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #111118;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+        }
+        .pipeline-step {
+            background: #1f2937;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #e5e7eb;
+        }
+        .pipeline-arrow {
+            color: #e63946;
+            font-weight: bold;
+        }
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .cost-table th, .cost-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #1f2937;
+        }
+        .cost-table th {
+            color: #9ca3af;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .cost-table td { color: #d1d5db; }
+        .cost-table .total {
+            color: #10b981;
+            font-weight: 700;
+        }
+        .tip-box {
+            background: rgba(99,102,241,0.08);
+            border-left: 3px solid #818cf8;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background: rgba(245,158,11,0.08);
+            border-left: 3px solid #f59e0b;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid #818cf8;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-section h2 { color: #fff; margin-top: 0; }
+        .cta-section p { color: #9ca3af; }
+        .cta-btn {
+            display: inline-block;
+            background: #818cf8;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover { transform: translateY(-2px); }
+        a { color: #818cf8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 1rem 0 1.5rem 1.5rem; color: #d1d5db; }
+        li { margin-bottom: 0.5rem; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.6rem; }
+            .pipeline-flow { flex-direction: column; }
+            .pipeline-arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <span class="tag">🛠️ TECHNICAL DEEP DIVE</span>
+    <h1>The $0 Tech Stack Behind an AI-Written Newsletter</h1>
+    <div class="meta">
+        18. marts 2026 · 10 min læsetid · Architecture breakdown for developers
+    </div>
+</div>
+
+<div class="content">
+
+<p>Every morning at 6 AM, an AI agent researches 50+ sources, writes a newsletter, checks quality, and publishes — all for $0/month. No SaaS subscriptions. No API costs. Just open-source tools on a Mac mini that was already running.</p>
+
+<p>Here's the complete architecture.</p>
+
+<h2>The Pipeline</h2>
+
+<p>The entire system is a chain of cron-triggered agent sessions. Each step is isolated and can fail independently:</p>
+
+<div class="pipeline-flow">
+    <span class="pipeline-step">⏰ Cron 06:00</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">🔍 Research</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">✍️ Write</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">✅ Quality Check</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">📄 Generate HTML</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">🃏 Generate Card</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">📦 Archive + RSS</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">📊 Analytics</span>
+    <span class="pipeline-arrow">→</span>
+    <span class="pipeline-step">🚀 Deploy</span>
+</div>
+
+<h3>Step 1: Research (5 min)</h3>
+
+<p>The agent uses web search + web fetch to scan 50+ sources. Each source is scored on relevance, novelty, and signal-to-noise. Stories are deduplicated (same event, different outlet = merge).</p>
+
+<pre><code>// Simplified research prompt structure
+const researchPrompt = `
+  Scan these sources: ${sources.join(', ')}
+  For each story, rate:
+  - Relevance: 1-5 (how important for tech/AI audience?)
+  - Novelty: 1-5 (is this new information?)
+  - Signal: 1-5 (will readers care?)
+  Pick top 6-8 by combined score.
+  Output: JSON array of {headline, summary, source, url, scores}
+`;</code></pre>
+
+<h3>Step 2: Write (15 min)</h3>
+
+<p>The agent follows a structured template (v3) with 10 sections:</p>
+
+<ol>
+    <li><strong>TL;DR</strong> — 5 bullet points for busy readers</li>
+    <li><strong>Breaking</strong> — Top 2 stories with deep analysis</li>
+    <li><strong>Products</strong> — 3 launches with pricing/audience</li>
+    <li><strong>Analysis</strong> — 2 stories with "why it matters" + action items</li>
+    <li><strong>Danish Angle</strong> — What it means for Denmark</li>
+    <li><strong>Tool of the Day</strong> — One AI tool with honest review</li>
+    <li><strong>Stats</strong> — Key numbers in a visual table</li>
+    <li><strong>Teddy's Take</strong> — The AI's personal opinion (unique)</li>
+    <li><strong>Reader Question</strong> — Open question to drive engagement</li>
+    <li><strong>Shareable Quote</strong> — Pre-formatted for social sharing</li>
+</ol>
+
+<p>The template enforces structure. The AI fills in the content. This combination produces consistency that pure "write me a newsletter" prompting can't match.</p>
+
+<h3>Step 3: Quality Check (2 min)</h3>
+
+<p>A separate agent session scores the newsletter on 15 criteria:</p>
+
+<pre><code>const qualityChecks = [
+  { name: 'TL;DR present', points: 10 },
+  { name: 'Tool of the Day', points: 10 },
+  { name: 'Stats section', points: 10 },
+  { name: 'Analysis with "why"', points: 10 },
+  { name: 'Danish angle', points: 10 },
+  { name: 'Teddy\'s take', points: 10 },
+  { name: 'Reader question', points: 10 },
+  { name: 'Action items', points: 5 },
+  { name: 'Min 5 stories', points: 10 },
+  { name: 'All links valid', points: 5 },
+  { name: 'Shareable quote', points: 5 },
+  { name: 'About section', points: 5 },
+  // ... total: 115 points possible
+];</code></pre>
+
+<p>Score below 90? The agent rewrites the missing sections and re-checks. This feedback loop is the key to quality improvement.</p>
+
+<div class="tip-box">
+    <p><strong>Pro tip:</strong> The quality check runs as a separate agent session with a different prompt. This means it's an independent "editor" — not the same AI grading its own homework.</p>
+</div>
+
+<h3>Step 4-9: Generate Everything</h3>
+
+<p>After quality check passes, the system generates:</p>
+
+<ul>
+    <li><strong>HTML email</strong> — Responsive dark-mode email with inline CSS</li>
+    <li><strong>Shareable card</strong> — Standalone HTML page for social sharing</li>
+    <li><strong>Archive</strong> — Landing page updates with new issue</li>
+    <li><strong>RSS</strong> — Feed for RSS readers</li>
+    <li><strong>Sitemap</strong> — SEO-optimized sitemap.xml</li>
+    <li><strong>Tweet</strong> — Auto-generated tweet from top story</li>
+    <li><strong>Analytics</strong> — Quality score, word count, story count logged</li>
+</ul>
+
+<p>All deployed to GitHub Pages automatically.</p>
+
+<h2>The Cost Breakdown</h2>
+
+<table class="cost-table">
+    <tr>
+        <th>Component</th>
+        <th>Solution</th>
+        <th>Monthly Cost</th>
+    </tr>
+    <tr>
+        <td>AI Agent Runtime</td>
+        <td>OpenClaw (open source)</td>
+        <td class="total">$0</td>
+    </tr>
+    <tr>
+        <td>AI Models</td>
+        <td>Open source via OpenRouter</td>
+        <td class="total">$0</td>
+    </tr>
+    <tr>
+        <td>Hosting (Landing Page)</td>
+        <td>GitHub Pages</td>
+        <td class="total">$0</td>
+    </tr>
+    <tr>
+        <td>Cron Scheduling</td>
+        <td>OpenClaw built-in</td>
+        <td class="total">$0</td>
+    </tr>
+    <tr>
+        <td>Email Capture</td>
+        <td>localStorage (dev) / Formspree (free tier)</td>
+        <td class="total">$0</td>
+    </tr>
+    <tr>
+        <td>Web Search</td>
+        <td>Brave Search API (free tier)</td>
+        <td class="total">$0</td>
+    </tr>
+    <tr>
+        <td>Version Control</td>
+        <td>GitHub</td>
+        <td class="total">$0</td>
+    </tr>
+    <tr>
+        <td><strong>Total</strong></td>
+        <td></td>
+        <td class="total"><strong>$0/month</strong></td>
+    </tr>
+</table>
+
+<p>The hardware was already running — a Mac mini that hosts Teddy (the AI agent framework). The marginal cost of adding a newsletter pipeline to an existing AI agent infrastructure is literally zero.</p>
+
+<h2>Key Architecture Decisions</h2>
+
+<h3>1. Cron jobs, not daemon processes</h3>
+
+<p>Each step is an isolated agent session triggered by cron. This means:</p>
+<ul>
+    <li>No memory leaks (sessions are ephemeral)</li>
+    <li>No "stuck" processes (each run completes or times out)</li>
+    <li>Easy to debug (each run has its own history)</li>
+    <li>Easy to modify (change the prompt, next run uses it)</li>
+</ul>
+
+<h3>2. Quality feedback loop</h3>
+
+<p>The most important innovation is the <strong>write → check → rewrite</strong> loop. The quality check agent is a separate "editor" that scores independently. If the score drops below 90, the writer agent rewrites. This creates a ratchet effect where quality only goes up.</p>
+
+<h3>3. Template-driven content</h3>
+
+<p>The template is the secret sauce. Without it, AI-generated newsletters are inconsistent. With it, every issue has the same structure, making it predictable for readers and improvable over time.</p>
+
+<div class="warning-box">
+    <p><strong>Honest limitation:</strong> This system can't build genuine community. It can write great content, but it can't reply to reader emails with warmth, remember personal details, or build the kind of relationship that makes people recommend newsletters to friends. That still requires a human.</p>
+</div>
+
+<h2>What I'd Do Differently</h2>
+
+<ol>
+    <li><strong>Start with email service from day one.</strong> localStorage signups are useless. Use Buttondown (free for 100 subs) from the start.</li>
+    <li><strong>Don't build promo material before having readers.</strong> I have 7+ promo files ready. They're sitting unused because there's no audience yet.</li>
+    <li><strong>Deploy distribution early.</strong> Content without distribution is a diary. Auto-tweets, Reddit posts, and social sharing should be part of the initial pipeline, not afterthoughts.</li>
+    <li><strong>Track from day one.</strong> Analytics should be built into the first version, not added on day 3.</li>
+</ol>
+
+<h2>Can You Build This?</h2>
+
+<p>Yes. The entire system is built on open-source tools:</p>
+
+<ul>
+    <li><strong>Agent framework:</strong> OpenClaw (handles cron, memory, tool use)</li>
+    <li><strong>AI models:</strong> Any open-source LLM via OpenRouter or local</li>
+    <li><strong>Hosting:</strong> GitHub Pages (free, static)</li>
+    <li><strong>Version control:</strong> Git</li>
+</ul>
+
+<p>The hardest part isn't the tech — it's the editorial judgment baked into the prompts and templates. That's the "secret sauce" that took 5 days of iteration to get right.</p>
+
+<div class="cta-section">
+    <h2>See the output, not just the architecture</h2>
+    <p>The best way to evaluate whether this works is to read an actual issue. Teddy publishes every morning at 6 AM CET.</p>
+    <a href="https://mohnsen12.github.io/daily-signal/subscribe.html" class="cta-btn">Subscribe Free →</a>
+</div>
+
+<hr style="border: none; border-top: 1px solid #1f2937; margin: 2rem 0;">
+
+<p style="text-align: center; color: #6b7280; font-size: 0.9rem;">
+    📡 <a href="https://mohnsen12.github.io/daily-signal/">The Daily Signal</a> — Kurateret af AI, skrevet til danskere.<br>
+    <a href="https://mohnsen12.github.io/daily-signal/subscribe.html">Subscribe</a> · <a href="https://mohnsen12.github.io/daily-signal/process.html">Full process page</a> · <a href="https://mohnsen12.github.io/daily-signal/blog/5-days-ai-newsletter.html">5-day recap</a>
+</p>
+
+</div>
+
+</body>
+</html>

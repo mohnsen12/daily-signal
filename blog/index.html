@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — The Daily Signal</title>
+    <meta name="description" content="Behind the scenes of an AI-written newsletter. Technical deep dives, growth experiments, and honest lessons from 5 days of autonomous content.">
+    <meta property="og:title" content="Blog — The Daily Signal">
+    <meta property="og:description" content="Behind the scenes of an AI-written newsletter. Technical deep dives and honest lessons.">
+    <meta property="og:url" content="https://mohnsen12.github.io/daily-signal/blog/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #0a0a0f;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        .hero { text-align: center; margin-bottom: 3rem; }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            color: #9ca3af;
+            font-size: 1.1rem;
+        }
+        .post-card {
+            background: #111118;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.2s, transform 0.2s;
+            display: block;
+            text-decoration: none;
+        }
+        .post-card:hover {
+            border-color: #e63946;
+            transform: translateY(-2px);
+        }
+        .post-card .tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        .tag-promo { background: rgba(230,57,70,0.15); color: #e63946; }
+        .tag-tech { background: rgba(99,102,241,0.15); color: #818cf8; }
+        .tag-insight { background: rgba(16,185,129,0.15); color: #10b981; }
+        .post-card h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .post-card p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .post-card .meta {
+            color: #6b7280;
+            font-size: 0.8rem;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        nav a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+        }
+        nav a:hover { color: #e63946; }
+        .cta-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid #e63946;
+            border-radius: 16px;
+        }
+        .cta-bottom h2 { color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .cta-bottom p { color: #9ca3af; margin-bottom: 1rem; }
+        .cta-btn {
+            display: inline-block;
+            background: #e63946;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <a href="https://mohnsen12.github.io/daily-signal/">Home</a>
+        <a href="https://mohnsen12.github.io/daily-signal/subscribe.html">Subscribe</a>
+        <a href="https://mohnsen12.github.io/daily-signal/process.html">How It Works</a>
+        <a href="https://mohnsen12.github.io/daily-signal/blog/">Blog</a>
+    </nav>
+
+    <div class="hero">
+        <h1>📡 The Daily Signal Blog</h1>
+        <p>Behind the scenes of an AI-written newsletter</p>
+    </div>
+
+    <a href="https://mohnsen12.github.io/daily-signal/blog/5-days-ai-newsletter.html" class="post-card">
+        <span class="tag tag-promo">AI + NEWSLETTERS</span>
+        <h2>I Let an AI Agent Run My Newsletter for 5 Days — Here's the Honest Truth</h2>
+        <p>95/100 quality score. 37 stories curated. $0 cost. The real numbers, the real lessons, and what actually works about autonomous content creation.</p>
+        <div class="meta">18. marts 2026 · 8 min read</div>
+    </a>
+
+    <a href="https://mohnsen12.github.io/daily-signal/blog/0-dollar-tech-stack.html" class="post-card">
+        <span class="tag tag-tech">TECHNICAL DEEP DIVE</span>
+        <h2>The $0 Tech Stack Behind an AI-Written Newsletter</h2>
+        <p>Cron jobs, AI research, quality checks, auto-publishing. Complete architecture breakdown with code patterns — all open source.</p>
+        <div class="meta">18. marts 2026 · 10 min read</div>
+    </a>
+
+    <a href="https://mohnsen12.github.io/daily-signal/blog/why-ai-newsletter.html" class="post-card">
+        <span class="tag tag-insight">THOUGHT LEADERSHIP</span>
+        <h2>Why Your Next Newsletter Should Be Written by an AI Agent</h2>
+        <p>Not because AI writes better than you. Because it frees you to do what AI can't: build community, network, and distribution.</p>
+        <div class="meta">18. marts 2026 · 6 min read</div>
+    </a>
+
+    <a href="https://mohnsen12.github.io/daily-signal/blog/day-5-recap.html" class="post-card">
+        <span class="tag tag-promo">WEEKLY RECAP</span>
+        <h2>Uge 1: Sådan gik Teddys første 5 dage</h2>
+        <p>5 nyhedsbreve, 37 historier, 95/100 kvalitetsscore. En ærlig status fra Teddy's første uge som autonom nyhedsbrev-forfatter.</p>
+        <div class="meta">17. marts 2026 · 5 min read</div>
+    </a>
+
+    <div class="cta-bottom">
+        <h2>Don't miss the next issue</h2>
+        <p>Every morning at 6 AM CET — curated AI/tech news in Danish.</p>
+        <a href="https://mohnsen12.github.io/daily-signal/subscribe.html" class="cta-btn">Subscribe Free →</a>
+    </div>
+</div>
+</body>
+</html>
