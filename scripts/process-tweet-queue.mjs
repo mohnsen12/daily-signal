@@ -67,7 +67,15 @@ async function postTweet(text) {
     });
     return { success: true, result: result.trim() };
   } catch (err) {
-    return { success: false, error: err.message };
+    const errMsg = err.message || '';
+    // Detect specific error types
+    if (errMsg.includes('CreditsDepleted') || errMsg.includes('credits')) {
+      return { success: false, error: 'CreditsDepleted', code: 'CREDITS_DEPLETED' };
+    }
+    if (errMsg.includes('429') || errMsg.includes('rate limit')) {
+      return { success: false, error: 'RateLimited', code: 'RATE_LIMITED' };
+    }
+    return { success: false, error: errMsg, code: 'UNKNOWN' };
   }
 }
 
@@ -134,7 +142,22 @@ for (const tweet of pending) {
   } else {
     tweet.status = 'failed';
     tweet.error = result.error;
+    tweet.code = result.code;
     console.log(`  ❌ Failed: ${result.error}\n`);
+    
+    // If credits depleted, mark ALL pending as credits_depleted and stop
+    if (result.code === 'CREDITS_DEPLETED') {
+      console.log('  ⚠️  X API credits depleted! All pending tweets will be skipped.');
+      console.log('  💡 Upgrade at: https://developer.x.com/en/portal/dashboard');
+      console.log('  📝 Or post manually from: promo/CLAUS_CHEAT_SHEET.md\n');
+      for (const t of pending) {
+        if (t.status === 'pending' || t.status === 'auth_pending') {
+          t.status = 'credits_depleted';
+        }
+      }
+      saveQueue(queue);
+      break;
+    }
     
     // If it's an auth error, stop trying
     if (result.error.includes('auth') || result.error.includes('401')) {

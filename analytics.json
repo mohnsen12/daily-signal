@@ -140,8 +140,44 @@
           "readingTimeMin": 4
         }
       }
+    },
+    {
+      "date": "2026-03-18T05:04:24.397Z",
+      "metrics": {
+        "totalIssues": 4,
+        "avgStories": 7,
+        "avgWords": 892,
+        "avgLinks": 7.3,
+        "avgReadTimeMin": 5,
+        "qualityScore": 100,
+        "consistencyStreak": 4,
+        "latestIssue": {
+          "date": "2026-03-18",
+          "storyCount": 8,
+          "wordCount": 1060,
+          "linkCount": 8,
+          "sectionCount": 8,
+          "sectionNames": [
+            "📋 TL;DR",
+            "🔥 Breaking",
+            "📦 Produkter & Lanceringer",
+            "🔍 Analyse & Indsigt",
+            "🏛️ Regulering",
+            "🛠️ Dagens Værktøj",
+            "📊 I tal",
+            "💬 Delbart"
+          ],
+          "features": {
+            "tldr": true,
+            "tool": true,
+            "numbers": true,
+            "opinion": true
+          },
+          "readingTimeMin": 6
+        }
+      }
     }
   ],
   "firstRun": "2026-03-16T21:02:45.572Z",
-  "lastUpdated": "2026-03-17T17:08:55.630Z"
+  "lastUpdated": "2026-03-18T05:04:24.397Z"
 }
